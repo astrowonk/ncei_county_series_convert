@@ -1,6 +1,7 @@
 """Script to convert NOAA NCEI County Temp and Preciptation data to CSV"""
 
 import pandas as pd
+import csv
 
 noaa_code_to_fips_code_state = {
     1: 1,
@@ -99,7 +100,7 @@ if __name__ == '__main__':
     df = convert_to_df(my_file)
     if args.output_format == 'csv':
         new_file = my_file.with_suffix('.csv')
-        df.to_csv(new_file, index=False)
+        df.to_csv(new_file, index=False, quoting=csv.QUOTE_NONNUMERIC)
     elif args.output_format == 'parquet':
         new_file = my_file.with_suffix('.parquet')
         df.to_parquet(new_file, index=False)
