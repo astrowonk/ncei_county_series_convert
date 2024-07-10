@@ -1,9 +1,9 @@
 
-## Convert NOAA County Time Series Data to CSV
+## Convert NOAA County Time Series Climate Data to CSV
 
 This code works on the [bulk NCEI climate division files](https://www.ncei.noaa.gov/pub/data/cirs/climdiv/) at the NCEI for **counties**. For an interactive way to view this data, try the [County Time Series page](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/county/time-series).
 
-This is not a particularly hard script to write, but it was somewhat tedious so hopefully this saves someone some time.
+This is not a particularly hard script to write, but it was somewhat tedious so hopefully this saves someone some time. I needed historical average temperatures for US counties, and I found the data but had to write this to get it into a useful dataframe.
 
 It should convert files in that link that have the filenames:
 
