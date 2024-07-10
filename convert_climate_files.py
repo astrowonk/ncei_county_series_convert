@@ -80,8 +80,8 @@ def convert_to_df(filename):
         'december',
     ]
     df['state_fips'] = df['state_code'].map(noaa_code_to_fips_code_state)
-    df['fips_int'] = (df['fips_state'] * 1000 + df['county_fips']).astype(int)
-    df['fips_str'] = df['FIPS_int'].apply(lambda x: f'{x:05}')
+    df['fips_int'] = (df['state_fips'] * 1000 + df['county_fips']).astype(int)
+    df['fips_str'] = df['fips_int'].apply(lambda x: f'{x:05}')
     return df
 
 
