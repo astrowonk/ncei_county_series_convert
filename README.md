@@ -20,5 +20,14 @@ In addition to converting from a fixed width formation to CSV, the script create
 
 The element (and other columns) are described in the [county readme](https://www.ncei.noaa.gov/pub/data/cirs/climdiv/county-readme.txt), but is generally the same for every row for the same filename (`tmpccy` files wil be all be a "2" element code, for example.)
 
+```
+01 = Precipitation
+02 = Average Temperature
+25 = Heating Degree Days
+26 = Cooling Degree Days
+27 = Maximum Temperature
+28 = Minimum Temperature
+```
+
 The script requires [pandas](https://pandas.pydata.org). If you want to export to parquet, you'll need something like pyarrow or a parquet backend for pandas.
 
